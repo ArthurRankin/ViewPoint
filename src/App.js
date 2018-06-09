@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './main.css';
 import Login from './components/loginPage/Login';
+import Questionare from './components/questionare/Questionare';
 import { rebase }  from './components/DBInteractions/base';
 
 
@@ -13,7 +14,6 @@ class App extends Component {
     }
 
   componentDidMount = () => {
-    console.log("componentDidMount");
     this.authListener = rebase.initializedApp.auth().onAuthStateChanged((user) =>{
       if (user) {
         this.setState({
@@ -23,6 +23,8 @@ class App extends Component {
       } 
     })
   }
+
+
   render() {
     return(
     !this.state.authed
@@ -31,7 +33,7 @@ class App extends Component {
           <Login />
       </div>
     :
-    <div>you are logged in homie</div>
+      <Questionare />
     )}
 }
 
