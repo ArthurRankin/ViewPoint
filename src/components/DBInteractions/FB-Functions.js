@@ -31,7 +31,7 @@ import { googleProvider, rebase }  from './base';
       context: this,
       asArray: true, 
       then(data) {
-        let myObj = JSON.stringify(data);
+        let myObj = data[0];
         return myObj;
       }
 
@@ -67,7 +67,17 @@ import { googleProvider, rebase }  from './base';
         name: user.displayName,
         portrait: user.photoURL,
         uid: user.uid,
+        answers: {}
       })
+      .then(() => {
+        return user;
+      })
+  }
+
+  export function saveAnswers (user, obj) {
+    console.log(user, obj);
+    return rebase.initializedApp.database().ref().child(`users/${user.uid}`)
+      .update({obj})
       .then(() => {
         return user;
       })
