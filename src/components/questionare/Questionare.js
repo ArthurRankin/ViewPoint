@@ -28,18 +28,42 @@ class Questionare extends Component {
                 <div className="d-flex flex-column">
                     <div className="btn-group btn-group-toggle" data-toggle="buttons">
                         <label className="btn btn-secondary">
-                            <input type="radio" value="true" onClick={this.handleChange}  name="red" id="option1" autoComplete="off" /> Red
+                            <input 
+                                type="radio" 
+                                value="true" 
+                                onClick={this.handleChange}  
+                                name="red" 
+                                id="option1" 
+                                autoComplete="off" /> Red
                         </label>
                         <label className="btn btn-secondary">
-                            <input type="radio" value="false" onClick={this.handleChange} name="red" id="option2" autoComplete="off" /> Blue
+                            <input 
+                                type="radio" 
+                                value="false" 
+                                onClick={this.handleChange} 
+                                name="red" 
+                                id="option2" 
+                                autoComplete="off" /> Blue
                         </label>
                     </div>
                     <div className="btn-group btn-group-toggle" data-toggle="buttons">
                         <label className="btn btn-secondary">
-                            <input type="radio" value="true" onClick={this.handleChange} name="mac" id="option1" autoComplete="off" /> Mac
-                        </label>
+                            <input 
+                                type="radio" 
+                                value="true" 
+                                onClick={this.handleChange} 
+                                name="mac" 
+                                id="option1" 
+                                autoComplete="off" /> Mac
+                            </label>
                         <label className="btn btn-secondary">
-                            <input type="radio" value="false" onClick={this.handleChange} name="mac" id="option2" autoComplete="off" /> PC
+                            <input 
+                                type="radio" 
+                                value="false" 
+                                onClick={this.handleChange} 
+                                name="mac" 
+                                id="option2" 
+                                autoComplete="off" /> PC
                         </label>
                     </div>
                     <div>

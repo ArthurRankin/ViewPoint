@@ -19,24 +19,24 @@ class App extends Component {
 
 
   componentDidMount = () => {
-    console.log('this.state first', this.state.data.length);
-    this.authListener = rebase.initializedApp.auth().onAuthStateChanged((user) =>{
-      if (user) {
-        this.setState({
-          authed: true,
-          user: user,
-          uid:user.uid
-        });
-        GetFromFB(`users/${this.state.uid}`)
-        .then((data) => {
-          this.setState({
-            data:data
-          })
-          console.log('this.state.',this.state.data[0].mac);
-        });
+      console.log('this.state first', this.state.data.length);
+      this.authListener = rebase.initializedApp.auth().onAuthStateChanged((user) =>{
+          if (user) {
+              this.setState({
+                  authed: true,
+                  user: user,
+                  uid:  user.uid
+              });
+              GetFromFB(`users/${this.state.uid}`)
+                  .then((data) => {
+                      this.setState({
+                        data:data
+                      })
+                  console.log('this.state.',this.state.data.length);
+                  });
         
-      } 
-    })
+          } 
+      })
   }
 
 
@@ -50,7 +50,7 @@ class App extends Component {
         </div>
     :
     
-    !this.state.data.length > 0  
+    this.state.data.length < 5
 
     ?
         <div className="container main-div d-flex align-items-center justify-content-center">
@@ -59,7 +59,7 @@ class App extends Component {
 
     :
 
-        <div>
+        <div className="container main-div d-flex align-items-center justify-content-center">
             <ChatRoom />
         </div>
     )}
