@@ -10,10 +10,9 @@ class ChatRoom extends Component {
       currentUsername: '',
       currentScreen: 'WhatIsYourUsernameScreen',
     }
-    this.onUsernameSubmitted = this.onUsernameSubmitted.bind(this)
   }
 
-  onUsernameSubmitted(username) {
+  onUsernameSubmitted = (username) => {
     fetch('http://localhost:3001/users', {
       method: 'POST',
       headers: {
