@@ -19,7 +19,6 @@ class App extends Component {
 
 
   componentDidMount = () => {
-      console.log('this.state first', this.state.data.length);
       this.authListener = rebase.initializedApp.auth().onAuthStateChanged((user) =>{
           if (user) {
               this.setState({
@@ -32,7 +31,6 @@ class App extends Component {
                       this.setState({
                         data:data
                       })
-                  console.log('this.state.',this.state.data.length);
                   });
         
           } 
@@ -60,7 +58,7 @@ class App extends Component {
     :
 
         <div className="container main-div d-flex align-items-center justify-content-center">
-            <ChatRoom />
+            <ChatRoom user={this.state.user}/>
         </div>
     )}
 }
