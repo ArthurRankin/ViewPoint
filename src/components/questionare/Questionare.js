@@ -1,4 +1,3 @@
-import QuestTemp from './QuestTemp';
 import React, {Component} from 'react';
 import { SaveObjToFB } from '../DBInteractions/FB-Functions';
 
@@ -36,7 +35,7 @@ class Questionare extends Component {
                                 name="red" 
                                 id="option1" 
                                 autoComplete="off"
-                                checked="false" /> Red
+                                 /> Red
                         </label>
                         <p className="ml-3 mr-3">or</p>
                         <label className="choice btn btn-primary pr-5 pl-5">
@@ -47,7 +46,7 @@ class Questionare extends Component {
                                 name="red" 
                                 id="option2" 
                                 autoComplete="off"
-                                checked="false" /> Blue
+                                 /> Blue
                         </label>
                     </div>
                     <div className="btn-group btn-group-toggle m-3 justify-content-between" data-toggle="buttons">

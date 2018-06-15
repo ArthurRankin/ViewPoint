@@ -26,7 +26,6 @@ import { googleProvider, rebase }  from './base';
   }
 
   export function GetFromFB (endpoint){
-    console.log('Getting Stuff from FB:', endpoint);
     return rebase.fetch(endpoint, {
       context: this,
       asArray: true, 
