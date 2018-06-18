@@ -49,8 +49,8 @@ class ChatScreen extends Component {
         .then(currentUser => {
             this.setState({ currentUser }) 
             return currentUser.subscribeToRoom({
-                roomId: 9491722,
-                messageLimit: 100,
+                roomId: 9748284,
+                messageLimit: 5,
                 hooks: {
                     onNewMessage: message => {
                         this.setState({
@@ -89,11 +89,11 @@ class ChatScreen extends Component {
                 display: 'flex',
                 flex: 1,
             },
-            whosOnlineListContainer: {
+            directions: {
                 width: '300px',
                 flex: 'none',
                 padding: 20,
-                backgroundColor: '#2c303b',
+                backgroundColor: 'black',
                 color: 'white',
             },
             chatListContainer: {
@@ -107,10 +107,17 @@ class ChatScreen extends Component {
         return (
             <div style={styles.container}>
                 <div style={styles.chatContainer}>
-                    <aside style={styles.whosOnlineListContainer}>
-                        <h2>Who's online PLACEHOLDER</h2>
+                    <aside style={styles.directions}>
+                        <h2>Directions</h2>
+                        <ol>
+                            <li>You have 5 messages to convince the other of your viewpoint, so don't waste your message on anger</li>
+                            <li>Stand firm on your beliefs</li>
+                            <li>Read and feel what the other person is saying</li>
+                            <li>BE NICE, unless you can't</li>
+                        </ol>
                     </aside>
                     <section style={styles.chatListContainer}>
+                        <h2 className="border-bottom">Star Wars Vs. Startrek</h2>
                         <MessageList
                         messages={this.state.messages}
                         style={styles.chatList}

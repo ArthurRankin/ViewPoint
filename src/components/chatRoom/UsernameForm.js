@@ -21,14 +21,15 @@ class UsernameForm extends Component {
     return (
       <div>
         <div>
-          <h2>What is your username?</h2>
+          <h2 className="text-center">NickName</h2>
+          <p>Pick a nickname for people to see!! <br /> good examples are:<br /> "DebateMan" <br /> "ArthurTheUnreasonable"<br /> "ListenToMe" etc..</p>
           <form onSubmit={this.onSubmit}>
             <input
               type="text"
-              placeholder="Your full name"
+              placeholder="NickName"
               onChange={this.onChange}
             />
-            <input type="submit" />
+            <input type="submit" className="btn btn-warning align-self-center ml-2" value="Submit" />
           </form>
         </div>
       </div>

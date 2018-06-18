@@ -1,3 +1,8 @@
+body {
+    background: linear-gradient(#C5E946, #AF4FA2);
+    color:black;
+}
+
 .main-div {
     height: 100vh;
     width: 100vw;
@@ -17,4 +22,15 @@ form {
 .active {
     background-color: green;
     border: 2px solid green;
+}
+
+
+
+.intro {
+    font-size: 1.7em;
+    word-spacing:  .2em;
+}
+
+input-placeholder {
+    color:black;
 }
