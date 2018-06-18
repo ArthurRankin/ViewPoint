@@ -25,15 +25,15 @@ import React, { Component } from 'react'
      const styles = {
        container: {
          padding: 20,
-         borderTop: '1px #4C758F solid',
+         borderTop: '1px black solid',
          marginBottom: 20,
        },
        form: {
          display: 'flex',
        },
        input: {
-         color: 'inherit',
-         background: 'none',
+         color: 'black',
+         background: 'white',
          outline: 'none',
          border: 'none',
          flex: 1,

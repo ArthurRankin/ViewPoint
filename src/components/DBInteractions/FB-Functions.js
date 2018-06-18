@@ -30,8 +30,7 @@ import { googleProvider, rebase }  from './base';
       context: this,
       asArray: true, 
       then(data) {
-        let myObj = data[0];
-        return myObj;
+        return data;
       }
 
     })

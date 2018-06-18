@@ -24,7 +24,11 @@ class Questionare extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
+        <div className="container main-div d-flex align-items-center justify-content-center">
+            <div className="w-25 border border-success border-left-0 mr-2">
+                <p className="intro">ok! find out a little about your self and answer these questions!</p>
+            </div>
+            <form onSubmit={this.handleSubmit} className="border border-info">
                 <div className="d-flex flex-column justify-content-center ">
                     <div className="btn-group btn-group-toggle m-3 justify-content-between" data-toggle="buttons">
                         <label className="choice btn btn-primary pr-5 pl-5">
@@ -218,10 +222,11 @@ class Questionare extends Component {
                         </label>
                     </div>
                     <div className="d-flex justify-content-center">
-                        <input type="submit" className="btn btn-success align-self-center" value="Submit" />
+                        <input type="submit" className="btn btn-warning align-self-center" value="Submit" />
                     </div>
                 </div>
             </form>
+        </div>
         )
     }
 }
